@@ -2,7 +2,7 @@ FROM index.shurenyun.com/zhfang/ubuntu:14.04
 MAINTAINER FANG ZHIHAO <zhfang@dataman-inc.com>
 
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update -qq && apt-get install -y mysql-server-5.6
+RUN apt-get update -qq && apt-get install -y mysql-server-5.5
 
 ADD my.cnf /etc/mysql/conf.d/my.cnf
 RUN chmod 664 /etc/mysql/conf.d/my.cnf
