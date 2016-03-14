@@ -4,7 +4,7 @@ This is a simple Java application with MySQL.
 # Run
 
 
-## Standalone
+## Standalonerrr
 
 * `docker run -d --net=host   -v $(pwd):/host -e MYSQL_USER=java -e MYSQL_PASSWORD=java -e MYSQL_DATABASE=javatest --name mysql   index.shurenyun.com/zhfang/mysql:5.5`
 * `docker exec -it mysql bash`
