@@ -11,19 +11,27 @@ public class ReadWriteFile {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String MYSQL_USER = System.getenv().get("MYSQL_USER");
-		String MYSQL_PASSWORD = System.getenv().get("MYSQL_PASSWORD");
-		String MYSQL_HOST = System.getenv().get("MYSQL_HOST");
-		String MYSQL_DATABASE = System.getenv().get("MYSQL_DATABASE");
+		String MYSQL_USER = "java";
+		String MYSQL_PASSWORD = "java";
+		String MYSQL_DATABASE = "javatest";
+		String MYSQL_HOST = "localhost";
+		if (null != System.getenv().get("MYSQL_HOST")) {
+			MYSQL_HOST = System.getenv().get("MYSQL_HOST");
+		}
+		if (null != System.getenv().get("MYSQL_USER")) {
+			MYSQL_USER = System.getenv().get("MYSQL_USER");
+		}
+		if (null != System.getenv().get("MYSQL_PASSWORD")) {
+			MYSQL_PASSWORD = System.getenv().get("MYSQL_PASSWORD");
+		}
 
-		// String MYSQL_USER = "java";
-		// String MYSQL_PASSWORD = "java";
-		// String MYSQL_HOST = "10.3.10.11";
-		// String MYSQL_DATABASE = "javatest";
+		if (null != System.getenv().get("MYSQL_DATABASE")) {
+			MYSQL_DATABASE = System.getenv().get("MYSQL_DATABASE");
+		}
 
 		try {
-			BufferedReader bufReader = new BufferedReader(
-					new InputStreamReader(new FileInputStream(new File("/opt/tomcat/webapps/dbtest/META-INF/contextbak.xml"))));
+			BufferedReader bufReader = new BufferedReader(new InputStreamReader(
+					new FileInputStream(new File("/opt/tomcat/webapps/dbtest/META-INF/contextbak.xml"))));
 			StringBuffer strBuf = new StringBuffer();
 			for (String tmp1 = null; (tmp1 = bufReader.readLine()) != null; tmp1 = null) {
 				// 替换UC操作
