@@ -38,7 +38,7 @@ This is a simple Java application with MySQL.
 
 
 ####3、制作docker镜像，java先通过读取环境变量，得到mysql的参数，从而tomcat访问数据库
-* `docker run --net=host -e MYSQL_USER=java -e MYSQL_PASSWORD=java -e MYSQL_DATABASE=javatest -e MYSQL_HOST=10.3.10.11 javatest  bash -c "java -jar /tmp/replace.jar&&/usr/local/bin/run"`
+* `docker run --net=host -e MYSQL_USER=java -e MYSQL_PASSWORD=java -e MYSQL_DATABASE=javatest -e MYSQL_HOST=10.3.10.11 index.shurenyun.com/zhfang/javatest:0315  bash -c "java -jar /tmp/replace.jar&&/usr/local/bin/run"`
 
 ####4、访问
 You should be able to access the app on http://\<docker-host-ip\>:8080/dbtest
