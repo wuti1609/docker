@@ -75,6 +75,37 @@ You should be able to access the app on http://\<docker-host-ip\>:8080/dbtest
 ![tomcat](./mysql.png)
 
 
+###tomcat 发布
+
+#####*应用名称:tomcat
+#####*选择集群:java-demo
+#####*镜像地址:index.shurenyun.com/zhfang/javatest
+#####*镜像版本:0315
+#####*网络模式:网桥模式  
+#####*挂载点添加挂载路径
+
+	
+#####*容器规格：CPU: 0.1 内存: 512MB
+#####*容器个数:1
+
+####高级设置 
+#####应用地址
+8080 对内 http  8080
+
+
+#####添加环境变量
+######MYSQL_DATABASE	javatest
+######MYSQL_PASSWORD	java
+######MYSQL_USER	java
+######MYSQL_HOST	10.3.10.11
+
+#####CMD
+`java -jar /tmp/replace.jar&&/usr/local/bin/run`
+
+![tomcat](./tomcat.png)
+
+
+
 
 
 
