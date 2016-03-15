@@ -104,7 +104,9 @@ You should be able to access the app on http://\<docker-host-ip\>:8080/dbtest
 
 ![tomcat](./tomcat.png)
 
+###WEB 访问
 
+![tomcat](./web.png)
 
 
 
